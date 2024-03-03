@@ -1,3 +1,4 @@
+import 'package:fast_app_base/app.dart';
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/theme/color/dark_app_colors.dart';
 import 'package:fast_app_base/common/theme/color/light_app_colors.dart';
@@ -31,6 +32,22 @@ enum CustomTheme {
 }
 
 ThemeData lightTheme = ThemeData(
+  //primarySwatch: primarySwatchColor,
+  visualDensity: VisualDensity.adaptivePlatformDensity,
+  brightness: Brightness.light,
+  colorScheme: const ColorScheme.light(background: Colors.white)
+);
+
+ThemeData darkTheme = ThemeData(
+  //primarySwatch: primarySwatchColor,
+    visualDensity: VisualDensity.adaptivePlatformDensity,
+    brightness: Brightness.dark,
+    scaffoldBackgroundColor: AppColors.veryDarkGrey,
+    colorScheme: const ColorScheme.dark(background: AppColors.veryDarkGrey)
+);
+
+/*
+ThemeData lightTheme = ThemeData(
     useMaterial3: true,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     brightness: Brightness.light,
@@ -50,3 +67,4 @@ ThemeData darkTheme = ThemeData(
     // ),
     colorScheme: ColorScheme.fromSeed(
         seedColor: CustomTheme.dark.appColors.seedColor, brightness: Brightness.dark));
+*/
